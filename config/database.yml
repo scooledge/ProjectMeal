@@ -27,10 +27,10 @@ production:
   <<: *default
   adapter: mysql2
   encoding: utf8
-  database: <%= END[`RDS_DB_NAME`]%>
-  username: <%= END[`RDS_USERNAME`]%>
-  password: <%= END[`RDS_PASSWORD`]%>
-  host: <%= END[`RDS_HOSTNAME`]%>
-  port: <%= END[`RDS_PORT`]%>
+  database: <%= ENV[`RDS_DB_NAME`] %>
+  username: <%= ENV[`RDS_USERNAME`] %>
+  password: <%= ENV[`RDS_PASSWORD`] %>
+  host: <%= ENV[`RDS_HOSTNAME`] %>
+  port: <%= ENV[`RDS_PORT`] %>
   database: db/production.sqlite3
   
